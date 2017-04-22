@@ -6,7 +6,7 @@ using System;
 using System.Windows.Forms;
 using BorderLessBrowser.Controls;
 using CefSharp.WinForms;
-
+using BorderLessBrowser.Handlers;
 namespace BorderLessBrowser
 {
     public partial class BrowserForm : Form
@@ -24,11 +24,11 @@ namespace BorderLessBrowser
             {
                 Dock = DockStyle.Fill,
             };
+            browser.LifeSpanHandler = new LifeSpanHandler();
             toolStripContainer.ContentPanel.Controls.Add(browser);
             
         }
         
-
         private void LoadUrl(string url)
         {
             if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
