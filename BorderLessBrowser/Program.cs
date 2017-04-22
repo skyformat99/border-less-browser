@@ -2,11 +2,12 @@
 //
 // Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
 
+using CefSharp;
 using System;
 using System.IO;
 using System.Windows.Forms;
 
-namespace CefSharp.MinimalExample.WinForms
+namespace BorderLessBrowser
 {
     public class Program
     {
